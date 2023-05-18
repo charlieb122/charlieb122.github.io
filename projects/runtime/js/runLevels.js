@@ -30,9 +30,9 @@ function createSawBlade(x, y) {
     obstacleImage.x = -25;
     obstacleImage.y = -25;
 }
-createSawBlade(1200, 300);
+createSawBlade(1200, 400);
 createSawBlade(1300, 400);
-createSawBlade(1300, 100);
+createSawBlade(1500, 400);
 
 var enemy = game.createGameItem("enemy", 25);
 var redSquare = draw.rect(50, 50, "red");
