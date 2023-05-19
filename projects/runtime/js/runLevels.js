@@ -30,9 +30,9 @@ function createSawBlade(x, y) {
     obstacleImage.x = -25;
     obstacleImage.y = -25;
 }
-createSawBlade(1200, 400);
-createSawBlade(1300, 400);
-createSawBlade(1500, 400);
+createSawBlade(1200, 425);
+createSawBlade(1300, 425);
+createSawBlade(1500, 425);
 
 var enemy = game.createGameItem("enemy", 25);
 var redSquare = draw.rect(50, 50, "red");
@@ -45,20 +45,21 @@ game.addGameItem(enemy);
 enemy.velocityX = -1;
 enemy.velocityY = 0;
 
-enemy.onPlayerCollision = function () {
-  game.changeIntegrity(-10)
-};
 
-enemy.onProjectileCollision = function () {
-  game.increaseScore(100);
-enemy.fadeOut();
-};
 
 function createEnemy(x, y) {
+  enemy.onPlayerCollision = function () {
+    game.changeIntegrity(-10)
+  };
+  
+  enemy.onProjectileCollision = function () {
+    game.increaseScore(100);
+  enemy.fadeOut();
+  };
+}
 createEnemy(400, groundY - 10);
 createEnemy(800, groundY - 100);
 createEnemy(1200, groundY - 50);
-}
 
 function createReward(){
 
